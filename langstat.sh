@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#################################################################################################
-#												#
-# type the commande : ./langstat.sh dico.txt -help  (for use help of this script)		#
-# tappez la commande : ./langstat.sh dico.txt -help (pour utiliser l'aide de se script)		#
-#												#
-#################################################################################################
+#########################################################################################################
+#													#
+# First type command : ./langstat.sh dico.txt -help  (for use help of this script)			#
+# En premier tappez la commande : ./langstat.sh dico.txt -help (pour utiliser l'aide de ce script)	#
+#													#
+#########################################################################################################
 
 # Vide la console
 clear
