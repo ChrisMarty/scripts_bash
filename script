@@ -1,0 +1,58 @@
+#!/bin/bash
+
+clear
+if [ $# -ge 1 ]
+then 
+	if [ $1 = 'christophe' ]
+	then
+		echo "Bonjour tout le monde, ceci un script bash [$0]"
+		echo "Le nombre de paramètre est : $#" 
+
+		date=`date`
+		echo "Aujourd'hui nous somme le : $date"
+
+		echo "Votre éditeur par défaut est $EDITOR"
+
+		message=`pwd`
+		echo -e "le répertoire courant est le suivant : $message\n\n"
+
+		while [ -z $nom ]
+		do
+			read -p 'Votre nom : ' nom
+		done
+		while [ -z $prenom ]
+		do
+			read -p 'Votre prenom : ' prenom
+		done
+		while [ -z $num ]
+		do
+			read -p 'Votre numéro de poste (3 chiffres max.): ' -n 3 num
+		done
+		echo
+		while [ -z $pass ]
+		do 
+			read -p 'Votre mot de passe : ' -t 5 -s pass
+		done
+		echo -e "\n\n\nBonjour $prenom $nom ($num)!"
+		
+		let "b = 10"
+		echo -e "\n\n"
+		while [ -z chiffre ]
+		do
+			let "b = 10"
+			read -p "Un chiffre qui sera multiplié par $b : " chiffre
+		done		
+		let "a = $chiffre"
+		let "c = a * b"
+		echo -e "Résultat : $c\n\n"
+
+		tableau=('toto' 'tata' 'titi')
+		echo "Les valeur du tableau sont : ${tableau[*]}"
+		tab=('10' '20' '30')
+		echo -e "Valeur 2 du tableau : ${tab[1]}\n\n"
+	else
+		echo "Je ne vous connait pas !"
+	fi
+else
+	echo "Il manque l'utilisateur en paramètre !"
+fi
